@@ -1,9 +1,9 @@
-import { Box } from "@chakra-ui/react";
+import Router from "./Router";
 
 const App = () => {
   return (
     <>
-      <Box></Box>
+      <Router />
     </>
   );
 };
