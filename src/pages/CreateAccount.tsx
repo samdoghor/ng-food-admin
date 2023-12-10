@@ -12,9 +12,9 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 
-const Login = () => {
+const CreateAccount = () => {
   useEffect(() => {
-    document.title = "Login | NIFDA Editor";
+    document.title = "Create Account | NIFDA Editor";
   }, []);
 
   const currentYear = new Date().getFullYear();
@@ -72,7 +72,7 @@ const Login = () => {
             <Box w={"60%"}>
               <Box borderBottom={"2px"} borderColor={"ngDarkblue"} p={"2px"}>
                 <Text color={"ngDarkblue"} fontSize={"2rem"} fontWeight={"700"}>
-                  Login
+                  Create Account
                 </Text>
               </Box>
               <Box pt={"2rem"}>
@@ -85,6 +85,14 @@ const Login = () => {
                     <FormLabel>Password</FormLabel>
                     <Input type="password" placeholder="type your password" />
                   </Box>
+                  <Box>
+                    <FormLabel>First Name</FormLabel>
+                    <Input type="text" placeholder="type your first name" />
+                  </Box>
+                  <Box>
+                    <FormLabel>Last Name</FormLabel>
+                    <Input type="text" placeholder="type your surname" />
+                  </Box>
                   <Box display={"flex"} justifyContent={"center"}>
                     <Button
                       mt={4}
@@ -94,13 +102,13 @@ const Login = () => {
                       as="a"
                       _hover={{ bg: "ngDarkerblue", cursor: "pointer" }}
                     >
-                      Login
+                      Create Account
                     </Button>
                   </Box>
                   <Box display={"flex"} justifyContent={"center"} pt={"2rem"}>
                     or
-                    <Link href="/createaccount" ps={"4px"}>
-                      create account
+                    <Link href="/" ps={"4px"}>
+                      login
                     </Link>
                   </Box>
                 </FormControl>
@@ -127,4 +135,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default CreateAccount;
