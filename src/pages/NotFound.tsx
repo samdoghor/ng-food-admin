@@ -2,10 +2,10 @@ import { Box, Text, Image, chakra, Button, Link } from "@chakra-ui/react";
 import { useEffect } from "react";
 
 const NotFound = () => {
-    useEffect(() => {
-        document.title = "Not Found | The Nigeria Food API";
-    }, []);
-    
+  useEffect(() => {
+    document.title = "Not Found | NIFDA Editor";
+  }, []);
+
   return (
     <>
       <Box>
@@ -73,6 +73,6 @@ const NotFound = () => {
       </Box>
     </>
   );
-}
+};
 
-export default NotFound
+export default NotFound;
