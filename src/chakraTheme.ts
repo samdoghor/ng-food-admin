@@ -3,8 +3,8 @@ import { extendTheme } from '@chakra-ui/react'
 
 const chakraTheme = extendTheme({
     fonts: {
-        archivoBlack: `'Archivo Black', 'sans-serif'`,
-        albertSans: `'Albert Sans', 'sans-serif'`,
+        eduQLDBeginner: `'Edu QLD Beginner', 'cursive'`,
+        dhurjati: `'Dhurjati', 'sans-serif'`,
         overpass: `'Overpass', 'sans-serif'`,
         heebo: `'Heebo', 'sans-serif'`,
     },

@@ -64,7 +64,7 @@ const CreateAccount = () => {
           <GridItem
             w={"100%"}
             bg={"white"}
-            h={{ base: "50vh", md: "100vh" }}
+            minH={{ base: "70vh", md: "100vh" }}
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
@@ -105,7 +105,11 @@ const CreateAccount = () => {
                       Create Account
                     </Button>
                   </Box>
-                  <Box display={"flex"} justifyContent={"center"} pt={"2rem"}>
+                  <Box
+                    display={"flex"}
+                    justifyContent={"center"}
+                    pt={{ base: "1rem", md: "2rem" }}
+                  >
                     or
                     <Link href="/" ps={"4px"}>
                       login
