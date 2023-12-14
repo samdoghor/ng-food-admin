@@ -28,6 +28,7 @@ import {
 } from "react-icons/md";
 import { IoBugSharp, IoStatsChartSharp } from "react-icons/io5";
 import { GiTrophyCup } from "react-icons/gi";
+import { LuFileInput } from "react-icons/lu";
 
 const Navigation = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -40,6 +41,7 @@ const Navigation = () => {
         position={"fixed"}
         top={"0"}
         w={"100%"}
+        zIndex={10}
       >
         <Box px={{ base: "1rem", md: "6rem" }}>
           <Flex as={"nav"} alignItems={"center"} justifyContent={"center"}>
@@ -74,7 +76,7 @@ const Navigation = () => {
                     size={"xs"}
                   >
                     <DrawerOverlay />
-                    <DrawerContent bg={"gray.100"}>
+                    <DrawerContent bg={"white"}>
                       <DrawerHeader
                         borderBottomWidth="2px"
                         borderBottomColor={"gray.300"}
@@ -88,16 +90,56 @@ const Navigation = () => {
                         as={"div"}
                         color={"ngDarkblue"}
                         fontWeight={500}
-                        fontSize={"1.2rem"}
+                        fontSize={{ base: "1rem", sm: "1.1rem" }}
                       >
                         <Menu>
-                          <MenuItem as={ReactRouterLink} to="/dashboard">
+                          <MenuItem
+                            as={ReactRouterLink}
+                            to="/dashboard"
+                            py={"0.8rem"}
+                          >
                             <IoStatsChartSharp />
-                            <Text ps={"0.5rem"}>Statistics</Text>
+                            <Text ps={"0.5rem"}>Dashboard</Text>
                           </MenuItem>
-                          <MenuItem as={ReactRouterLink} to="/">
+                          <MenuItem
+                            as={ReactRouterLink}
+                            to="/dashboard"
+                            py={"0.8rem"}
+                          >
+                            <LuFileInput />
+                            <Text ps={"0.5rem"}>Contribute</Text>
+                          </MenuItem>
+                          <MenuItem
+                            as={ReactRouterLink}
+                            to="/leaderboard"
+                            py={"0.8rem"}
+                          >
                             <GiTrophyCup />
                             <Text ps={"0.5rem"}>Leader Board</Text>
+                          </MenuItem>
+                          <MenuItem
+                            as={ReactRouterLink}
+                            to="/dashboard"
+                            py={"0.8rem"}
+                          >
+                            <IoBugSharp />
+                            <Text ps={"0.5rem"}>Report Bug</Text>
+                          </MenuItem>
+                          <MenuItem
+                            as={ReactRouterLink}
+                            to="/dashboard"
+                            py={"0.8rem"}
+                          >
+                            <MdCheckBox />
+                            <Text ps={"0.5rem"}>Request Feature</Text>
+                          </MenuItem>
+                          <MenuItem
+                            as={ReactRouterLink}
+                            to="/dashboard"
+                            py={"0.8rem"}
+                          >
+                            <MdLogout />
+                            <Text ps={"0.5rem"}>Logout</Text>
                           </MenuItem>
                         </Menu>
                       </DrawerBody>
@@ -128,11 +170,16 @@ const Navigation = () => {
                     <Flex
                       justifyContent={"center"}
                       alignItems={"center"}
-                      borderWidth={"2px"}
                       padding={"4px"}
-                      borderColor={"gray.300"}
+                      borderColor={"white"}
+                      p={"6px"}
                     >
-                      <Avatar name="Samuel Doghor" src="" size="sm" />
+                      <Avatar
+                        name="Samuel Doghor"
+                        src=""
+                        size="sm"
+                        bg={"white"}
+                      />
                       <Text color={"white"} ps={"0.3rem"} fontWeight={"medium"}>
                         Samuel, Doghor
                       </Text>
@@ -147,28 +194,29 @@ const Navigation = () => {
                   </MenuButton>
                   <MenuList
                     as={"div"}
-                    bg={"gray.100"}
+                    bg={"white"}
                     color={"ngDarkblue"}
                     fontSize={"1rem"}
                     fontWeight={500}
                     letterSpacing={"0.1rem"}
+                    rounded={0}
                   >
-                    <MenuItem as={ReactRouterLink} to="#" bg={"gray.100"}>
+                    <MenuItem as={ReactRouterLink} to="#" bg={"white"}>
                       <MdCoPresent />
                       <Text ps={"0.5rem"}>Profile</Text>
                     </MenuItem>
-                    <MenuItem as={ReactRouterLink} to="#" bg={"gray.100"}>
+                    <MenuItem as={ReactRouterLink} to="#" bg={"white"}>
                       <MdEmail />
-                      <Text ps={"0.5rem"}>Contact the team </Text>
+                      <Text ps={"0.5rem"}>Contact team </Text>
                     </MenuItem>
-                    <MenuItem as={ReactRouterLink} to="#" bg={"gray.100"}>
-                      <IoBugSharp /> <Text ps={"0.5rem"}>Report a bug</Text>
+                    <MenuItem as={ReactRouterLink} to="#" bg={"white"}>
+                      <IoBugSharp /> <Text ps={"0.5rem"}>Report bug</Text>
                     </MenuItem>
-                    <MenuItem as={ReactRouterLink} to="#" bg={"gray.100"}>
+                    <MenuItem as={ReactRouterLink} to="#" bg={"white"}>
                       <MdCheckBox />
-                      <Text ps={"0.5rem"}>Request a feature</Text>
+                      <Text ps={"0.5rem"}>Request feature</Text>
                     </MenuItem>
-                    <MenuItem as={ReactRouterLink} to="#" bg={"gray.100"}>
+                    <MenuItem as={ReactRouterLink} to="#" bg={"white"}>
                       <MdLogout /> <Text ps={"0.5rem"}>Logout </Text>
                     </MenuItem>
                   </MenuList>

@@ -1,5 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { Login, NotFound, CreateAccount, Dashboard } from "./Index";
+import {
+  Login,
+  NotFound,
+  CreateAccount,
+  Dashboard,
+  LeaderBoard,
+} from "./Index";
 
 const Router = () => {
   return (
@@ -8,6 +14,7 @@ const Router = () => {
         <Route path="/" element={<Login />} />
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

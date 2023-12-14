@@ -15,19 +15,20 @@ const Dashboard = () => {
         zIndex={4}
         mt={"5rem"}
         px={{ base: "1rem", md: "6rem" }}
+        fontWeight={400}
       >
         <Box>
           <Stack>
             <Text
-              fontSize={"3rem"}
-              fontWeight={600}
+              fontSize={"2.6rem"}
+              fontWeight={900}
               color={"ngDarkblue"}
-              fontFamily={"dhurjati"}
+              fontFamily={"heebo"}
             >
               Dashboard
             </Text>
             <Text
-              fontSize={"1.2rem"}
+              fontSize={"1rem"}
               color={"ngDarkblue"}
               fontFamily={"overpass"}
               fontWeight={400}
@@ -35,7 +36,14 @@ const Dashboard = () => {
               Welcome,
               <Highlight
                 query="Samuel Doghor"
-                styles={{ px: "2", py: "1", rounded: "full", bg: "red.100" }}
+                styles={{
+                  px: "2",
+                  py: "1",
+                  rounded: "full",
+                  bg: "ngDarkblue",
+                  color: "white",
+                  lineHeight: "2rem",
+                }}
               >
                 Samuel Doghor
               </Highlight>
@@ -43,7 +51,152 @@ const Dashboard = () => {
             </Text>
           </Stack>
         </Box>
-        <Box mt={"1rem"}>Home</Box>
+        <Box my={"4rem"}>
+          <Box
+            display={"grid"}
+            gridGap={"3rem"}
+            overflow={"hidden"}
+            gridTemplateColumns={{
+              lg: "repeat(3, 1fr)",
+              md: "repeat(2, 1fr)",
+            }}
+          >
+            <Box>
+              <Box
+                as={"div"}
+                backgroundColor={"white"}
+                p={"2rem"}
+                mx={"2.5rem"}
+                h={"72"}
+                rounded={"1rem"}
+                boxShadow="2xl"
+                borderBottom={"4px"}
+                borderBottomColor={"ngDarkblue"}
+                overflow={"hidden"}
+                _hover={{ cursor: "pointer" }}
+                position={"relative"}
+              >
+                <Text
+                  color={"ngDarkblue"}
+                  fontSize={"1.5rem"}
+                  pb={"1rem"}
+                  fontFamily={"overpass"}
+                  fontWeight={700}
+                >
+                  Food Groups
+                </Text>
+                <Text
+                  color={"ngDarkblue"}
+                  fontFamily={"albertSans"}
+                  fontSize={"1rem"}
+                >
+                  Food group is a nutritional category guiding balanced and
+                  healthy eating. The total number of Food Groups
+                </Text>
+                <Text
+                  color={"ngDarkblue"}
+                  fontFamily={"heebo"}
+                  fontWeight={900}
+                  fontSize={"2rem"}
+                  bottom={"1rem"}
+                  position={"absolute"}
+                >
+                  9
+                </Text>
+              </Box>
+            </Box>
+
+            <Box>
+              <Box
+                as={"div"}
+                backgroundColor={"white"}
+                p={"2rem"}
+                mx={"2.5rem"}
+                h={"72"}
+                rounded={"1rem"}
+                boxShadow="2xl"
+                borderBottom={"4px"}
+                borderBottomColor={"ngDarkblue"}
+                overflow={"hidden"}
+                _hover={{ cursor: "pointer" }}
+                position={"relative"}
+              >
+                <Text
+                  color={"ngDarkblue"}
+                  fontSize={"1.5rem"}
+                  pb={"1rem"}
+                  fontFamily={"overpass"}
+                  fontWeight={700}
+                >
+                  Food Categories
+                </Text>
+                <Text
+                  color={"ngDarkblue"}
+                  fontFamily={"albertSans"}
+                  fontSize={"1rem"}
+                >
+                  Food group is a nutritional category guiding balanced and
+                  healthy eating. The total number of Food Groups
+                </Text>
+                <Text
+                  color={"ngDarkblue"}
+                  fontFamily={"heebo"}
+                  fontWeight={900}
+                  fontSize={"2rem"}
+                  bottom={"1rem"}
+                  position={"absolute"}
+                >
+                  25
+                </Text>
+              </Box>
+            </Box>
+
+            <Box>
+              <Box
+                as={"div"}
+                backgroundColor={"white"}
+                p={"2rem"}
+                mx={"2.5rem"}
+                h={"72"}
+                rounded={"1rem"}
+                boxShadow="2xl"
+                borderBottom={"4px"}
+                borderBottomColor={"ngDarkblue"}
+                overflow={"hidden"}
+                _hover={{ cursor: "pointer" }}
+                position={"relative"}
+              >
+                <Text
+                  color={"ngDarkblue"}
+                  fontSize={"1.5rem"}
+                  pb={"1rem"}
+                  fontFamily={"overpass"}
+                  fontWeight={700}
+                >
+                  Food Items
+                </Text>
+                <Text
+                  color={"ngDarkblue"}
+                  fontFamily={"albertSans"}
+                  fontSize={"1rem"}
+                >
+                  Food group is a nutritional category guiding balanced and
+                  healthy eating. The total number of Food Groups
+                </Text>
+                <Text
+                  color={"ngDarkblue"}
+                  fontFamily={"heebo"}
+                  fontWeight={900}
+                  fontSize={"2rem"}
+                  bottom={"1rem"}
+                  position={"absolute"}
+                >
+                  523
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </>
   );
