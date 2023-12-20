@@ -103,7 +103,7 @@ const Navigation = () => {
                           </MenuItem>
                           <MenuItem
                             as={ReactRouterLink}
-                            to="/dashboard"
+                            to="/contribute"
                             py={"0.8rem"}
                           >
                             <LuFileInput />
