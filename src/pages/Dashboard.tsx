@@ -4,7 +4,7 @@ import { Box, Highlight, Stack, Text } from "@chakra-ui/react";
 
 const Dashboard = () => {
   useEffect(() => {
-    document.title = "Dashboard | NIFDA";
+    document.title = "Dashboard | NIFODA";
   }, []);
   return (
     <>

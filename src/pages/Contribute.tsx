@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 
 const Contribute = () => {
   useEffect(() => {
-    document.title = "Contributors | NIFDA";
+    document.title = "Contributors | NIFODA";
   }, []);
   return (
     <>
