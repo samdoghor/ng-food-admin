@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const NotFound = () => {
   useEffect(() => {
-    document.title = "Not Found | NIFDA Editor";
+    document.title = "Not Found | NIFODA Editor";
   }, []);
 
   return (

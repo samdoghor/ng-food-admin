@@ -16,7 +16,7 @@ import { useEffect } from "react";
 
 const LeaderBoard = () => {
   useEffect(() => {
-    document.title = "Leader Board | NIFDA";
+    document.title = "Leader Board | NIFODA";
   }, []);
   return (
     <>

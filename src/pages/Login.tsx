@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const Login = () => {
   useEffect(() => {
-    document.title = "Login | NIFDA Editor";
+    document.title = "Login | NIFODA Editor";
   }, []);
 
   const currentYear = new Date().getFullYear();
@@ -48,7 +48,7 @@ const Login = () => {
                 fontWeight={"700"}
                 align={"center"}
               >
-                The Nigeria Food Database API (NIFDA)
+                The Nigeria Food Database API (NIFODA)
               </Text>
 
               <Text
@@ -119,7 +119,7 @@ const Login = () => {
                   justifyContent={"center"}
                 >
                   <Text align={"center"}>
-                    All right reserved © NIFDA {currentYear}
+                    All right reserved © NIFODA {currentYear}
                   </Text>
                 </Box>
               </Box>

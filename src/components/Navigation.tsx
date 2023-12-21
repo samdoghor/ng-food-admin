@@ -158,7 +158,7 @@ const Navigation = () => {
                   color={"white"}
                 >
                   <chakra.span color={"green.400"} fontSize={"1.6rem"}>
-                    NIFDA
+                    NIFODA
                   </chakra.span>
                   .com
                 </chakra.span>
