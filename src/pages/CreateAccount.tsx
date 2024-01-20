@@ -8,6 +8,9 @@ import {
   Image,
   Input,
   Link,
+  Radio,
+  RadioGroup,
+  Stack,
   Text,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
@@ -93,6 +96,19 @@ const CreateAccount = () => {
                     <FormLabel>Last Name</FormLabel>
                     <Input type="text" placeholder="type your surname" />
                   </Box>
+                  <Box>
+                    <FormLabel>Are you a developer?</FormLabel>
+                    <RadioGroup defaultValue="False">
+                      <Stack spacing={5} direction="row">
+                        <Radio value="True" colorScheme="green">
+                          Yes
+                        </Radio>
+                        <Radio value="False" colorScheme="green">
+                          No
+                        </Radio>
+                      </Stack>
+                    </RadioGroup>
+                  </Box>
                   <Box display={"flex"} justifyContent={"center"}>
                     <Button
                       mt={4}
@@ -105,11 +121,7 @@ const CreateAccount = () => {
                       Create Account
                     </Button>
                   </Box>
-                  <Box
-                    display={"flex"}
-                    justifyContent={"center"}
-                    pt={{ base: "1rem", md: "2rem" }}
-                  >
+                  <Box display={"flex"} justifyContent={"center"} pt={"1rem"}>
                     or
                     <Link href="/" ps={"4px"}>
                       login

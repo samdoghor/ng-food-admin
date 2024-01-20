@@ -9,8 +9,8 @@ const NotFound = () => {
   return (
     <>
       <Box>
-        <Box maxW="100vw" minH="100vh" mx="auto" bg="gray.100">
-          <Box p={{ base: "1rem", lg: "2.5rem" }} mt={"2rem"}>
+        <Box maxW="100vw" minH="100vh" mx="auto" bg="gray.100" my={0}>
+          <Box p={{ base: "1rem", lg: "2.5rem" }}>
             <Box
               py={"3rem"}
               px={{ base: "0.8rem", lg: "8rem" }}
