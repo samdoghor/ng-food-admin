@@ -28,7 +28,6 @@ import {
 } from "react-icons/md";
 import { IoBugSharp, IoStatsChartSharp } from "react-icons/io5";
 import { GiTrophyCup } from "react-icons/gi";
-import { LuFileInput } from "react-icons/lu";
 
 const Navigation = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -100,14 +99,6 @@ const Navigation = () => {
                           >
                             <IoStatsChartSharp />
                             <Text ps={"0.5rem"}>Dashboard</Text>
-                          </MenuItem>
-                          <MenuItem
-                            as={ReactRouterLink}
-                            to="/contribute"
-                            py={"0.8rem"}
-                          >
-                            <LuFileInput />
-                            <Text ps={"0.5rem"}>Contribute</Text>
                           </MenuItem>
                           <MenuItem
                             as={ReactRouterLink}

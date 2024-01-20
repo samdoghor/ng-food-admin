@@ -5,7 +5,6 @@ import {
   CreateAccount,
   Dashboard,
   LeaderBoard,
-  Contribute,
 } from "./Index";
 
 const Router = () => {
@@ -16,7 +15,6 @@ const Router = () => {
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
-        <Route path="/contribute" element={<Contribute />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

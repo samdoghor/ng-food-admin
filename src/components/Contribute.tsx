@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Box } from "@chakra-ui/react";
-import Navigation from "../components/Navigation";
+import Navigation from "./Navigation";
 
 const Contribute = () => {
   useEffect(() => {
