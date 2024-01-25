@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
-import { Box, Highlight, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Highlight, Link, Stack, Text } from "@chakra-ui/react";
 
 const Dashboard = () => {
   useEffect(() => {
@@ -38,6 +38,7 @@ const Dashboard = () => {
                 query="Samuel Doghor"
                 styles={{
                   px: "2",
+                  mx: "2",
                   py: "1",
                   rounded: "full",
                   bg: "ngDarkblue",
@@ -49,6 +50,34 @@ const Dashboard = () => {
               </Highlight>
               , all your efforts you put in are really appreciated.
             </Text>
+            <Box
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Link as={"a"} href="/addfood" mx={"2"}>
+                <Button
+                  mx={"auto"}
+                  mt={"2rem"}
+                  bg={"ngDarkblue"}
+                  color={"white"}
+                  _hover={{ bg: "ngDarkerblue", color: "gray.300" }}
+                >
+                  Add Food
+                </Button>
+              </Link>
+              <Link as={"a"} href="/editor" mx={"2"}>
+                <Button
+                  mx={"auto"}
+                  mt={"2rem"}
+                  bg={"ngDarkblue"}
+                  color={"white"}
+                  _hover={{ bg: "ngDarkerblue", color: "gray.300" }}
+                >
+                  Add Others
+                </Button>
+              </Link>
+            </Box>
           </Stack>
         </Box>
         <Box my={"4rem"}>
