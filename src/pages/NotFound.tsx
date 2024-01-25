@@ -1,10 +1,13 @@
-import { Box, Text, Image, chakra, Button, Link } from "@chakra-ui/react";
+import { Box, Text, Image, chakra, Button } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 const NotFound = () => {
   useEffect(() => {
     document.title = "Not Found | NIFODA Editor";
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -62,11 +65,9 @@ const NotFound = () => {
               >
                 The food you want is not available on the menu.
               </Text>
-              <Link href="/">
-                <Button mx={"auto"} mt={"2rem"}>
-                  Go back home
-                </Button>
-              </Link>
+              <Button mx={"auto"} mt={"2rem"} onClick={() => navigate(-1)}>
+                Go back
+              </Button>
             </Box>
           </Box>
         </Box>
