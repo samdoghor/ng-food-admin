@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
-import { Box, Button, Highlight, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Highlight, Stack, Text } from "@chakra-ui/react";
 
 const Dashboard = () => {
   useEffect(() => {
@@ -50,7 +50,7 @@ const Dashboard = () => {
               </Highlight>
               , all your efforts you put in are really appreciated.
             </Text>
-            <Box
+            {/* <Box
               display={"flex"}
               justifyContent={"center"}
               alignItems={"center"}
@@ -77,7 +77,7 @@ const Dashboard = () => {
                   Add Others
                 </Button>
               </Link>
-            </Box>
+            </Box> */}
           </Stack>
         </Box>
         <Box my={"4rem"}>

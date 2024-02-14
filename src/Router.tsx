@@ -5,8 +5,6 @@ import {
   CreateAccount,
   Dashboard,
   LeaderBoard,
-  AddFood,
-  Editor,
 } from "./Index";
 
 const Router = () => {
@@ -16,8 +14,6 @@ const Router = () => {
         <Route path="/" element={<Login />} />
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/addfood" element={<AddFood />} />
-        <Route path="/editor" element={<Editor />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
