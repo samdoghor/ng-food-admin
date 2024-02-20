@@ -3,7 +3,7 @@ import {
   Login,
   NotFound,
   CreateAccount,
-  Dashboard,
+  Collection,
   LeaderBoard,
 } from "./Index";
 
@@ -13,7 +13,9 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/createaccount" element={<CreateAccount />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/collection">
+          <Route index element={<Collection />} />
+        </Route>
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
