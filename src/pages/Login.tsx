@@ -9,15 +9,19 @@ import {
   Input,
   Link,
   Text,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 
 const Login = () => {
   useEffect(() => {
     document.title = "Login | NIFODA Editor";
   }, []);
 
-  const currentYear = new Date().getFullYear();
+  const [show, setShow] = useState(false);
+  const handleClick = () => setShow(!show);
 
   return (
     <>
@@ -79,11 +83,26 @@ const Login = () => {
                 <FormControl>
                   <Box>
                     <FormLabel>Email address</FormLabel>
-                    <Input type="email" placeholder="type your email address" />
+                    <Input
+                      placeholder="Enter Email Address"
+                      size="md"
+                      type="email"
+                    />
                   </Box>
                   <Box>
                     <FormLabel>Password</FormLabel>
-                    <Input type="password" placeholder="type your password" />
+                    <InputGroup size="md">
+                      <Input
+                        pr="4.5rem"
+                        type={show ? "text" : "password"}
+                        placeholder="Enter password"
+                      />
+                      <InputRightElement width="4.5rem">
+                        <Button h="1.75rem" size="sm" onClick={handleClick}>
+                          {show ? "Hide" : "Show"}
+                        </Button>
+                      </InputRightElement>
+                    </InputGroup>
                   </Box>
                   <Box display={"flex"} justifyContent={"center"}>
                     <Button
@@ -93,6 +112,7 @@ const Login = () => {
                       color={"white"}
                       as="a"
                       _hover={{ bg: "ngDarkerblue", cursor: "pointer" }}
+                      size={"lg"}
                     >
                       Login
                     </Button>
@@ -109,20 +129,7 @@ const Login = () => {
                   </Box>
                 </FormControl>
               </Box>
-              <Box display={"flex"} justifyContent={"center"}>
-                <Box
-                  position={"absolute"}
-                  bottom={0}
-                  p={"1rem"}
-                  mx={"auto"}
-                  display={"flex"}
-                  justifyContent={"center"}
-                >
-                  <Text align={"center"}>
-                    All right reserved © NIFODA {currentYear}
-                  </Text>
-                </Box>
-              </Box>
+              <Footer />
             </Box>
           </GridItem>
         </Grid>

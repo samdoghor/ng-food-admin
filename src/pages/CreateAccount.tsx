@@ -12,15 +12,19 @@ import {
   RadioGroup,
   Stack,
   Text,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 
 const CreateAccount = () => {
   useEffect(() => {
     document.title = "Create Account | NIFODA Editor";
   }, []);
 
-  const currentYear = new Date().getFullYear();
+  const [show, setShow] = useState(false);
+  const handleClick = () => setShow(!show);
 
   return (
     <>
@@ -73,28 +77,52 @@ const CreateAccount = () => {
             alignItems={"center"}
           >
             <Box w={"60%"}>
-              <Box borderBottom={"2px"} borderColor={"ngDarkblue"} p={"2px"}>
+              <Box
+                borderBottom={"2px"}
+                borderColor={"ngDarkblue"}
+                px={"2px"}
+                pt={"2px"}
+              >
                 <Text color={"ngDarkblue"} fontSize={"2rem"} fontWeight={"700"}>
                   Create Account
                 </Text>
               </Box>
-              <Box pt={"2rem"}>
+              <Box pt={"1rem"}>
                 <FormControl>
                   <Box>
                     <FormLabel>Email address</FormLabel>
-                    <Input type="email" placeholder="type your email address" />
+                    <Input
+                      type="email"
+                      placeholder="Enter Email Address"
+                      size="md"
+                    />
                   </Box>
                   <Box>
                     <FormLabel>Password</FormLabel>
-                    <Input type="password" placeholder="type your password" />
+                    <InputGroup size="md">
+                      <Input
+                        pr="4.5rem"
+                        type={show ? "text" : "password"}
+                        placeholder="Enter password"
+                      />
+                      <InputRightElement width="4.5rem">
+                        <Button h="1.75rem" size="sm" onClick={handleClick}>
+                          {show ? "Hide" : "Show"}
+                        </Button>
+                      </InputRightElement>
+                    </InputGroup>
                   </Box>
                   <Box>
                     <FormLabel>First Name</FormLabel>
-                    <Input type="text" placeholder="type your first name" />
+                    <Input
+                      type="text"
+                      placeholder="Enter First Name"
+                      size="md"
+                    />
                   </Box>
                   <Box>
                     <FormLabel>Last Name</FormLabel>
-                    <Input type="text" placeholder="type your surname" />
+                    <Input type="text" placeholder="Enter Surname" size="md" />
                   </Box>
                   <Box>
                     <FormLabel>Are you a developer?</FormLabel>
@@ -116,6 +144,7 @@ const CreateAccount = () => {
                       bg={"ngDarkblue"}
                       color={"white"}
                       as="a"
+                      size={"lg"}
                       _hover={{ bg: "ngDarkerblue", cursor: "pointer" }}
                     >
                       Create Account
@@ -129,20 +158,7 @@ const CreateAccount = () => {
                   </Box>
                 </FormControl>
               </Box>
-              <Box display={"flex"} justifyContent={"center"}>
-                <Box
-                  position={"absolute"}
-                  bottom={0}
-                  p={"1rem"}
-                  mx={"auto"}
-                  display={"flex"}
-                  justifyContent={"center"}
-                >
-                  <Text align={"center"}>
-                    All right reserved © NIFODA {currentYear}
-                  </Text>
-                </Box>
-              </Box>
+              <Footer />
             </Box>
           </GridItem>
         </Grid>

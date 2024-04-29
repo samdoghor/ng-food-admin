@@ -16,7 +16,8 @@ const chakraTheme = extendTheme({
         ngOffwhite: '#dedddc',
         ngGreenvid: '#000a06',
         ngCyan: '#72d7d7',
-        ngCyanDarker: '#00a3a3'
+        ngCyanDarker: '#00a3a3',
+        ngPWhiteoff: '#f5f5f5'
     },
 })
 
