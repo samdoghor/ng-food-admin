@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Login, NotFound, CreateAccount, Dashboard } from "./Index";
+import { Login, NotFound, CreateAccount, Dashboard, Category } from "./Index";
 
 const Router = () => {
   return (
@@ -8,6 +8,7 @@ const Router = () => {
         <Route path="/" element={<Login />} />
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/category" element={<Category />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

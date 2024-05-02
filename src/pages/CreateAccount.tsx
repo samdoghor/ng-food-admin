@@ -14,6 +14,7 @@ import {
   Text,
   InputGroup,
   InputRightElement,
+  Divider,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
@@ -158,7 +159,10 @@ const CreateAccount = () => {
                   </Box>
                 </FormControl>
               </Box>
-              <Footer />
+              <Box pt={{ base: "4rem", md: "0rem" }}>
+                <Divider />
+                <Footer />
+              </Box>
             </Box>
           </GridItem>
         </Grid>

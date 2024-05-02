@@ -57,7 +57,7 @@ const Dashboard = () => {
         <Navigaton />
         <Header pagetitle={"NIFODA Dashboard"} />
         <Box bgColor={"ngPWhiteoff"} minHeight={"100vh"} py={"20px"}>
-          <Box marginLeft={"100px"} paddingX={"50px"}>
+          <Box marginLeft={"100px"} paddingX={{ base: "20px", md: "50px" }}>
             <Grid
               templateColumns={{ md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
               gap={10}
@@ -71,7 +71,7 @@ const Dashboard = () => {
                   rounded={"10px"}
                   borderWidth={1}
                   borderColor={"gray.200"}
-                  // bg="white"
+                  boxShadow={"md"}
                   _hover={{
                     textDecoration: "none",
                     boxShadow: "lg",
@@ -87,8 +87,8 @@ const Dashboard = () => {
                       <Text fontSize={"12px"} h={"100%"}>
                         {item.description}
                       </Text>
-                      <Divider my={"20px"} />
                       <Box bottom={0}>
+                        <Divider my={"20px"} />
                         <Grid templateColumns="repeat(2, 1fr)">
                           <GridItem>
                             <Text fontSize={"12px"}>
