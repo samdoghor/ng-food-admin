@@ -57,7 +57,7 @@ const Dashboard = () => {
         <Navigaton />
         <Header pagetitle={"NIFODA Dashboard"} />
         <Box bgColor={"ngPWhiteoff"} minHeight={"100vh"} py={"20px"}>
-          <Box marginLeft={"100px"} paddingX={{ base: "20px", md: "50px" }}>
+          <Box paddingX={{ base: "20px", md: "50px" }}>
             <Grid
               templateColumns={{ md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
               gap={10}

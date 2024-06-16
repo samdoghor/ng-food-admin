@@ -9,7 +9,6 @@ const Header: React.FC<Props> = ({ pagetitle }) => {
     <>
       <Box
         bgColor={"white"}
-        marginLeft={"100px"}
         paddingX={"20px"}
         boxShadow={
           "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)"
